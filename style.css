@@ -1,0 +1,120 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Fix horizontal scrolling */
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hero-img img {
+    width: 600px; /* Desktop fixed width */
+    border-radius: 10px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 20px;
+}
+
+.card {
+    width: 30%;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE SECTION
+   =========================== */
+
+@media (max-width: 768px) {
+
+    /* Stack nav links vertically */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    /* Stack hero section vertically */
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    /* Make images responsive */
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Stack content cards vertically */
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
